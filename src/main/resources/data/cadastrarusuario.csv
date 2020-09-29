@@ -1,0 +1,2 @@
+page;cenario;usuario;email;senha;senhaConf;primeiroNome;ultimoNome;telefone;selectpais;cidade;endereco;estado;cep
+cadastrarusuario;NOVA_CONTA_VALIDA;Tester_001;tester_001@gmail.com;Tester001;Tester001;Tester Primeiro Nome;Tester Ultimo Nome;11987282232;Brazil;Guarulhos;Av.Santa Inês 1969;SP;02415002

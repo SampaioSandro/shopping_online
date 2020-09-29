@@ -1,0 +1,127 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "que eu tenha acessado o site advantageonlineshopping atraves da url \"https://www.advantageonlineshopping.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.advantageonlineshopping.com",
+                  "offset": 69
+                }
+              ],
+              "location": "StepDefinitions.que_eu_tenha_acessado_o_site_advantageonlineshopping_atraves_da_url(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "Efetuar login em uma conta ja existente com informacoes validas",
+        "description": "",
+        "id": "efetuar-login-no-site-advantageonlineshopping;efetuar-login-em-uma-conta-ja-existente-com-informacoes-validas",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "eu clico no ícone da imagem do usuario",
+            "match": {
+              "location": "StepDefinitions.eu_clico_no_ícone_da_imagem_do_usuario()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "o sistema apresenta um poup-up/modal com opcoes de login, sendo atraves do facebook, com usuario pre-cadastrado ou criar uma nova conta e ainda a opcao de esqueci minha senha",
+            "match": {
+              "location": "StepDefinitions.o_sistema_apresenta_um_poup_up_modal_com_opcoes_de_login_sendo_atraves_do_facebook_com_usuario_pre_cadastrado_ou_criar_uma_nova_conta_e_ainda_a_opcao_de_esqueci_minha_senha()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "comments": [
+              {
+                "line": 11,
+                "value": "#    Then eu insiro as informacoes \u003ccenario\u003e"
+              }
+            ],
+            "line": 12,
+            "name": "clico no botao \"Assinar Em\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Assinar Em",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinitions.clico_no_botao(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "o sistema valida as informacoes",
+            "match": {
+              "location": "StepDefinitions.o_sistema_valida_as_informacoes()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "me direciona para home com o usuario ja logado",
+            "match": {
+              "location": "StepDefinitions.me_direciona_para_home_com_o_usuario_ja_logado()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@EfetuarLoginPositivo"
+          }
+        ]
+      }
+    ],
+    "name": "Efetuar login no site advantageonlineshopping",
+    "description": "",
+    "id": "efetuar-login-no-site-advantageonlineshopping",
+    "keyword": "Feature",
+    "uri": "features/EfetuarLogin.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@EfetuarLogin"
+      }
+    ]
+  }
+]

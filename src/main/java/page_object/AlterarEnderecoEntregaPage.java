@@ -1,0 +1,88 @@
+package page_object;
+
+import acessar_navegadores.AcessarNavegadores;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import page_utils.ObterDadosCSV;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+public class AlterarEnderecoEntregaPage extends AcessarNavegadores {
+//public class AlterarEnderecoEntregaPage extends ElementLocators {
+
+    private static HashMap<String, Object> hash_map;
+
+    public static void acessarMenu(By menuUsuarioBtn) {
+
+        WebDriverWait wait = new WebDriverWait(driver, 33);
+
+        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/label[@class='roboto-bold ng-scope']")));
+//        aguarde.wait(5);
+
+//        WebElement menuUsuario = wait.until(ExpectedConditions.visibilityOfElementLocated((menuUsuarioBtn)));
+//        menuUsuario.click();
+
+//        By.id("hrefUserIcon")
+        JavascriptExecutor java = (JavascriptExecutor) driver;
+        java.executeScript("$('menuUser').click();");
+
+    }
+
+    public static void selecionarItemMenu(By minhaconta) {
+
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+
+
+        WebElement follow = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/h3[@class='roboto-regular center ng-scope']")));
+
+        JavascriptExecutor java = (JavascriptExecutor) driver;
+//        java.executeScript("$('menuUser').click();");
+
+        java.executeScript("document.getElementsByClassName('hi-user containMiniTitle ng-binding')[0].click();");
+
+        WebElement conta = wait.until(ExpectedConditions.visibilityOfElementLocated(minhaconta));
+        conta.click();
+
+    }
+
+    public static void clicarLinkEditar(By editarLink) {
+
+        WebDriverWait wait = new WebDriverWait(driver, 33);
+
+        WebElement linkEditar = wait.until(ExpectedConditions.visibilityOfElementLocated(editarLink));
+        linkEditar.click();
+
+    }
+
+    public static void informarDados(By cidadeNovoTextfield, By enderecoNovoTextfield, By cepNovoTextfield) throws IOException {
+
+        WebDriverWait wait = new WebDriverWait(driver, 33);
+        hash_map = ObterDadosCSV.obterDadosCSV();
+
+        WebElement cidade = wait.until(ExpectedConditions.visibilityOfElementLocated(cidadeNovoTextfield));
+//        cidade.sendKeys("Guarulhos");
+        cidade.sendKeys((CharSequence) hash_map.get("cidade"));
+
+        WebElement endereco = wait.until(ExpectedConditions.visibilityOfElementLocated(enderecoNovoTextfield));
+//        endereco.sendKeys("Feira, 777");
+        endereco.sendKeys((CharSequence) hash_map.get("endereco"));
+
+        WebElement cep = wait.until(ExpectedConditions.visibilityOfElementLocated(cepNovoTextfield));
+        cep.sendKeys((CharSequence) hash_map.get("cep"));
+
+    }
+
+    public static void atualizarDados(By salvarBtn) {
+
+        WebDriverWait wait = new WebDriverWait(driver, 33);
+
+        WebElement btnSalvar = wait.until(ExpectedConditions.visibilityOfElementLocated(salvarBtn));
+        btnSalvar.click();
+
+    }
+
+}
