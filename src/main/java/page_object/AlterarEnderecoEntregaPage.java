@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class AlterarEnderecoEntregaPage extends AcessarNavegadores {
-//public class AlterarEnderecoEntregaPage extends ElementLocators {
 
     private static HashMap<String, Object> hash_map;
 
@@ -20,27 +19,19 @@ public class AlterarEnderecoEntregaPage extends AcessarNavegadores {
 
         WebDriverWait wait = new WebDriverWait(driver, 33);
 
-        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/label[@class='roboto-bold ng-scope']")));
-//        aguarde.wait(5);
+        WebElement menuUsuario = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']")));
 
-//        WebElement menuUsuario = wait.until(ExpectedConditions.visibilityOfElementLocated((menuUsuarioBtn)));
-//        menuUsuario.click();
-
-//        By.id("hrefUserIcon")
         JavascriptExecutor java = (JavascriptExecutor) driver;
-        java.executeScript("$('menuUser').click();");
-
+        java.executeScript("document.getElementsByClassName('hi-user containMiniTitle ng-binding')[0].click();");
     }
 
     public static void selecionarItemMenu(By minhaconta) {
 
         WebDriverWait wait = new WebDriverWait(driver, 60);
 
-
         WebElement follow = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/h3[@class='roboto-regular center ng-scope']")));
 
         JavascriptExecutor java = (JavascriptExecutor) driver;
-//        java.executeScript("$('menuUser').click();");
 
         java.executeScript("document.getElementsByClassName('hi-user containMiniTitle ng-binding')[0].click();");
 
@@ -58,20 +49,23 @@ public class AlterarEnderecoEntregaPage extends AcessarNavegadores {
 
     }
 
-    public static void informarDados(By cidadeNovoTextfield, By enderecoNovoTextfield, By cepNovoTextfield) throws IOException {
+    public static void informarDados(By cidadeAltTextfield, By enderecoAltTextfield, By cepAltTextfield) throws IOException {
 
         WebDriverWait wait = new WebDriverWait(driver, 33);
         hash_map = ObterDadosCSV.obterDadosCSV();
 
-        WebElement cidade = wait.until(ExpectedConditions.visibilityOfElementLocated(cidadeNovoTextfield));
+        WebElement cidade = wait.until(ExpectedConditions.visibilityOfElementLocated(cidadeAltTextfield));
 //        cidade.sendKeys("Guarulhos");
+        cidade.clear();
         cidade.sendKeys((CharSequence) hash_map.get("cidade"));
 
-        WebElement endereco = wait.until(ExpectedConditions.visibilityOfElementLocated(enderecoNovoTextfield));
+        WebElement endereco = wait.until(ExpectedConditions.visibilityOfElementLocated(enderecoAltTextfield));
 //        endereco.sendKeys("Feira, 777");
+        endereco.clear();
         endereco.sendKeys((CharSequence) hash_map.get("endereco"));
 
-        WebElement cep = wait.until(ExpectedConditions.visibilityOfElementLocated(cepNovoTextfield));
+        WebElement cep = wait.until(ExpectedConditions.visibilityOfElementLocated(cepAltTextfield));
+        cep.clear();
         cep.sendKeys((CharSequence) hash_map.get("cep"));
 
     }

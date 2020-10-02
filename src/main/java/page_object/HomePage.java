@@ -14,12 +14,12 @@ public class HomePage extends AcessarNavegadores {
 
     private static HashMap<String, Object> hash_map;
 
-    public static void acessarLogin(By menuUsuarioBtn) {
+    public static void acessarLogin(By menuUsuarioBtn, By aguardeGenerico) {
 
         WebDriverWait wait = new WebDriverWait(driver, 33);
 
-        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/label[@class='roboto-bold ng-scope']")));
-//        aguarde.wait(5);
+//        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/label[@class='roboto-bold ng-scope']")));
+        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(aguardeGenerico));
 
         WebElement menuUsuario = wait.until(ExpectedConditions.visibilityOfElementLocated((menuUsuarioBtn)));
         menuUsuario.click();
@@ -44,14 +44,13 @@ public class HomePage extends AcessarNavegadores {
         WebElement botao = wait.until(ExpectedConditions.visibilityOfElementLocated(logarBtn));
         botao.click();
 
-//        driver.navigate().refresh();
-
     }
 
-    public static void criarConta(By novaContaBtn) {
+    public static void criarConta(By novaContaBtn, By aguardeGenerico) {
 
         WebDriverWait wait = new WebDriverWait(driver, 21);
-        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/label[@class='roboto-bold ng-scope']")));
+//        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/label[@class='roboto-bold ng-scope']")));
+        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(aguardeGenerico));
 
         WebElement linkCriar = wait.until(ExpectedConditions.visibilityOfElementLocated(novaContaBtn));
         linkCriar.click();

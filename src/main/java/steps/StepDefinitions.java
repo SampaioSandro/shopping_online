@@ -15,7 +15,7 @@ public class StepDefinitions {
 
     @Then("^eu clico na opcao criar nova conta$")
     public void eu_clico_na_opcao_criar_nova_conta() throws Throwable {
-        HomePage.criarConta(ElementLocators.novaContaBtn);
+        HomePage.criarConta(ElementLocators.novaContaBtn, ElementLocators.aguardeGenerico);
     }
 
     @Then("^o sistema me direciona para experiencia de criacao de conta com os campos relacionados aos itens\\(Detalhes da Conta, Detalhes Pessoais e Endereco\\) habilitados para que eu insira as informacoes$")
@@ -28,7 +28,7 @@ public class StepDefinitions {
                 ElementLocators.senhaConfNovaTextfield, ElementLocators.primeiroNomeNovoTextfield, ElementLocators.ultimoNomeNovoTextfield,
                 ElementLocators.telefoneNovoTextfield, ElementLocators.selectpaisCombo, ElementLocators.cidadeNovoTextfield,
                 ElementLocators.enderecoNovoTextfield, ElementLocators.estadoNovoTextfield, ElementLocators.cepNovoTextfield,
-                ElementLocators.concordocheckBox);
+                ElementLocators.concordocheckBox, ElementLocators.aguardeGenerico2);
     }
 
     @Then("^clico no botao Registro$")
@@ -49,7 +49,7 @@ public class StepDefinitions {
     @When("^eu clico no ícone da imagem do usuario$")
     public void eu_clico_no_ícone_da_imagem_do_usuario() throws Throwable {  // O Cadastro do usuário utiliza o mesmo
         System.out.println("Só para ver se passa aqui ===>> 001");
-        HomePage.acessarLogin(ElementLocators.menuUsuarioBtn);
+        HomePage.acessarLogin(ElementLocators.menuUsuarioBtn, ElementLocators.aguardeGenerico);
     }
 
     @Then("^eu seleciono o arquivo de massa \"([^\"]*)\"$")
@@ -84,7 +84,7 @@ public class StepDefinitions {
     @When("^eu clico no frame/imagem do laptop$")
     public void eu_clico_no_frame_imagem_do_laptop() throws Throwable {
         System.out.println("Só para ver se passa aqui ===>> 002");
-        AdicionarProdutoCarrinhoPage.escolherSecao(ElementLocators.laptopsImg);
+        AdicionarProdutoCarrinhoPage.escolherSecao(ElementLocators.laptopsImg, ElementLocators.aguardeGenerico3);
     }
 
     @Then("^o sistema me direciona para tela que contem apenas os laptops, apresentando uma relacao de laptops contendo imagem, valor, preco e ainda um filtro com as opcoes \\(preco, exibicao, sistema operacional, processador, peso, cor\\)$")
@@ -121,7 +121,7 @@ public class StepDefinitions {
 
     @When("^passo o mouse sobre o icone do carrinho$")
     public void passo_o_mouse_sobre_o_icone_do_carrinho() throws Throwable {
-        EfetuarPagamentoPage.acessarCarrinho(ElementLocators.menuCarImg);
+        EfetuarPagamentoPage.acessarCarrinho(ElementLocators.menuCarImg, ElementLocators.aguardeGenerico3);
     }
 
     @Then("^o sistema apresenta um acorddion com as seguintes informacoes \\(modelo e nome do produto, quantidade, cor e valor, total de itens, valor total\\), e um botao de checkout com o valor total$")
@@ -148,7 +148,7 @@ public class StepDefinitions {
 
     @Then("^eu insiro as informacoes INFO_PGTO_VALIDAS$")
     public void eu_insiro_as_informacoes_INFO_PGTO_VALIDAS() throws Throwable {
-        EfetuarPagamentoPage.inserirInformacoes(ElementLocators.salvaProfilecheckBox, ElementLocators.usuarioSafeTextField, ElementLocators.senhaSafeTextField, ElementLocators.formaPgtRadio);
+        EfetuarPagamentoPage.inserirInformacoes(ElementLocators.salvaProfilecheckBox, ElementLocators.usuarioSafeTextField, ElementLocators.senhaSafeTextField, ElementLocators.formaPgtRadio, ElementLocators.aguardeGenerico3);
     }
 
     @Then("^clico no botao Pague Agora$")
@@ -174,8 +174,8 @@ public class StepDefinitions {
     @When("^eu clico no icone da imagem do usuario que ja esta com o meu login informado$")
     public void eu_clico_no_icone_da_imagem_do_usuario_que_ja_esta_com_o_meu_login_informado() throws Throwable {
         System.out.println("Só para ver se passa aqui ===>> 003");
-        HomePage.acessarLogin(ElementLocators.menuUsuarioBtn);
-//        AlterarEnderecoEntregaPage.acessarMenu(ElementLocators.menuUsuarioBtn);
+//        HomePage.acessarLogin(ElementLocators.menuUsuarioBtn);
+        AlterarEnderecoEntregaPage.acessarMenu(ElementLocators.menuUsuarioBtn);
     }
 
     @Then("^o sistema apresenta uma lista/accordin com tres opcoes, minha conta, minhas ordens, e sair$")
@@ -204,7 +204,7 @@ public class StepDefinitions {
     @Then("^eu insiro as informacoes ENDERECO$")
     public void eu_insiro_as_informacoes_ENDERECO() throws Throwable {
         System.out.println("Só para ver se passa aqui ===>> 005");
-        AlterarEnderecoEntregaPage.informarDados(ElementLocators.cidadeNovoTextfield, ElementLocators.enderecoNovoTextfield, ElementLocators.cepNovoTextfield);
+        AlterarEnderecoEntregaPage.informarDados(ElementLocators.cidadeAltTextfield, ElementLocators.enderecoAltTextfield, ElementLocators.cepAltTextfield);
     }
 
     @Then("^clico no botao Salve$")

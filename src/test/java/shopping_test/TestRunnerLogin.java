@@ -9,12 +9,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         format = {"pretty", "html:target/cucumber-html-report"},
         features = "classpath:features",
-//        tags = {"@EfetuarLogin, @EfetuarPagamento"},
-//        tags = "@CadastrarUsuario",
-//        tags = "@EfetuarLogin",
-//        tags = {"@EfetuarLogin, @AdicionarProduto"},
-        tags = {"@AlterarEnderecoEntrega"},
-//        tags = {"@EfetuarLogin, @AdicionarProduto, @AlterarEnderecoEntrega, @EfetuarPagamento"},
+//        tags = "@EfetuarPagamento",       // Esta OK
+//        tags = "@CadastrarUsuario",       // Esta OK
+        tags = "@EfetuarLogin",           // Esta OK
+//        tags = "@AdicionarProduto",       // Esta OK
+//        tags = "@AlterarEnderecoEntrega", // Esta OK
+//        tags = {"@CadastrarUsuario", "@EfetuarLogin, @AlterarEnderecoEntrega, @AdicionarProduto, @EfetuarPagamento"},
         glue = "classpath:steps"
 //        glue = "src/main/java/steps"
 //        dryRun = false

@@ -2,7 +2,17 @@
 Feature: Adicionar produtos ao carrinho no site advantageonlineshopping
 
   Background:
-    Given que eu tenha efetuado o login com um usuario valido no site advantageonlineshopping
+  Scenario Outline: Efetuar login em uma conta ja existente com informacoes validas
+    Given que eu tenha acessado o site advantageonlineshopping atraves da "<url>"
+    When eu clico no ícone da imagem do usuario
+    Then o sistema apresenta um poup-up/modal com opcoes de login, sendo atraves do facebook, com usuario pre-cadastrado ou criar uma nova conta e ainda a opcao de esqueci minha senha
+    Then eu seleciono o arquivo de massa "efetuarlogin"
+    Then eu insiro as informacoes <cenario>
+    Then o sistema valida as informacoes
+    And me direciona para home com o usuario ja logado
+    Scenarios:
+      | url                                     |cenario       |
+      | https://www.advantageonlineshopping.com |USUARIO_VALIDO|
 
   @AdicionarProdutoPositivo
   Scenario: Adicionar produtos ao carrinho

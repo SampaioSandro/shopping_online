@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class ElementLocators {
 
-    //CriarConta ===>  menuUser ----      (//a[@id="menuUserLink"]//*[name()="svg"])   --      driver.findElement(By.xpath("//*[@id='menuUser']")).click();
+    //CriarConta
     public static By menuUsuarioBtn = By.xpath("(//a[@id='menuUserLink']//*[name()='svg'])"); // utilizado também no Efetuar Login e AlterarEnderecoEntrega
     public static By novaContaBtn = By.linkText("CREATE NEW ACCOUNT");
     public static By usuarioNovoTextfield = By.name("usernameRegisterPage");
@@ -27,11 +27,10 @@ public class ElementLocators {
     public static By senhaTextField = By.name("password");
     public static By lembrarCheckBox = By.name("remember_me");
     public static By logarBtn = By.id("sign_in_btnundefined");
-//    public static String logarBtn = "document.getElementsById('sign_in_btnundefined').click();";
 
     //AdicionarProduto
     public static By laptopsImg = By.id("laptopsImg");
-    public static By laptopEscolhidoImg = By.xpath("//*[@id=\\\"3\\\"]");
+    public static By laptopEscolhidoImg = By.xpath("//*[@id='3']");
     public static By adicionaBtn = By.name("save_to_cart");
 
     //EfetuarPagamento
@@ -41,12 +40,19 @@ public class ElementLocators {
     public static String formaPgtRadio = "document.getElementsByName('safepay')[0].click();";
     public static By usuarioSafeTextField = By.name("safepay_username");
     public static By senhaSafeTextField = By.name("safepay_password");
-    public static By salvaProfilecheckBox = By.id("save_safepay");
+    public static By salvaProfilecheckBox = By.name("save_safepay");
     public static By pagueBtn = By.id("pay_now_btn_SAFEPAY");
 
     //AlterarEnderecoEntrega
     public static By minhaconta = By.xpath("(//label[@class='option roboto-medium ng-scope'])[2]");
-    public static By editarLink = By.xpath("/html/body/div[3]/section/article/div[1]/div[1]/h3/a/font/font");
+    public static By editarLink = By.xpath("/html/body/div[3]/section/article/div[1]/div[1]/h3/a");
     public static By salvarBtn = By.id("save_btnundefined");
+    public static By cidadeAltTextfield = By.name("cityAccountDetails");
+    public static By enderecoAltTextfield = By.name("addressAccountDetails");
+    public static By cepAltTextfield = By.name("postal_codeAccountDetails");
 
+    //Genérico
+    public static By aguardeGenerico = By.xpath("//div/label[@class='roboto-bold ng-scope']");
+    public static By aguardeGenerico2 = By.xpath("//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[2]/a");
+    public static By aguardeGenerico3 = By.xpath("//span[@class='hi-user containMiniTitle ng-binding']");
 }

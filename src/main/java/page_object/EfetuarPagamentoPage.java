@@ -1,8 +1,8 @@
 package page_object;
 
+import acessar_navegadores.AcessarNavegadores;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,15 +11,16 @@ import page_utils.ObterDadosCSV;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class EfetuarPagamentoPage {
+public class EfetuarPagamentoPage extends AcessarNavegadores {
 
-    static WebDriver driver;
     private static HashMap<String, Object> hash_map;
 
-    public static void acessarCarrinho(By menuCarImg) {
+    public static void acessarCarrinho(By menuCarImg, By aguardeGenerico3) {
 
         WebDriverWait wait = new WebDriverWait(driver, 31);
 
+//        WebElement menuUsuario = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']")));
+        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(aguardeGenerico3));
         WebElement carrinho = wait.until(ExpectedConditions.visibilityOfElementLocated(menuCarImg));
         carrinho.click();
 
@@ -42,10 +43,12 @@ public class EfetuarPagamentoPage {
 
     }
 
-    public static void inserirInformacoes(By salvaProfilecheckBox, By usuarioSafeTextField, By senhaSafeTextField, String formaPgtRadio) throws IOException {
+    public static void inserirInformacoes(By salvaProfilecheckBox, By usuarioSafeTextField, By senhaSafeTextField, String formaPgtRadio, By aguardeGenerico3) throws IOException {
         WebDriverWait wait = new WebDriverWait(driver, 31);
         hash_map = ObterDadosCSV.obterDadosCSV();
 
+//        WebElement menuUsuario = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']")));
+        WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(aguardeGenerico3));
         WebElement checkBox = wait.until(ExpectedConditions.visibilityOfElementLocated(salvaProfilecheckBox));
         checkBox.click();
 

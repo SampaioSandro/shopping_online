@@ -18,11 +18,11 @@ public class CadastrarUsuarioPage extends AcessarNavegadores {
     public static void informarDados(By usuarioNovoTextfield, By emailNovoTextfield, By senhaNovaTextfield, By senhaConfNovaTextfield,
                                      By primeiroNomeNovoTextfield, By ultimoNomeNovoTextfield, By telefoneNovoTextfield,
                                      By selectpaisCombo, By cidadeNovoTextfield, By enderecoNovoTextfield, By estadoNovoTextfield,
-                                     By cepNovoTextfield, By concordocheckBox) throws IOException {
+                                     By cepNovoTextfield, By concordocheckBox, By aguardeGenerico2) throws IOException {
 
-//        WebDriverWait wait = new WebDriverWait((WebDriver) driver, 33);
         WebDriverWait wait = new WebDriverWait(driver, 33);
-        WebElement aguarde =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[2]/a")));
+//        WebElement aguarde =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[2]/a")));
+        WebElement aguarde =  wait.until(ExpectedConditions.visibilityOfElementLocated(aguardeGenerico2));
 
         hash_map = ObterDadosCSV.obterDadosCSV();
 

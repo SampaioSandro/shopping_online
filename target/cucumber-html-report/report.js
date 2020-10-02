@@ -152,21 +152,21 @@ formatter.match({
   "location": "StepDefinitions.que_eu_tenha_acessado_o_site_advantageonlineshopping_atraves_da_url(String)"
 });
 formatter.result({
-  "duration": 8142674300,
+  "duration": 8003966200,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.eu_clico_no_ícone_da_imagem_do_usuario()"
 });
 formatter.result({
-  "duration": 2420428500,
+  "duration": 2368947800,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.o_sistema_apresenta_um_poup_up_modal_com_opcoes_de_login_sendo_atraves_do_facebook_com_usuario_pre_cadastrado_ou_criar_uma_nova_conta_e_ainda_a_opcao_de_esqueci_minha_senha()"
 });
 formatter.result({
-  "duration": 29100,
+  "duration": 30400,
   "status": "passed"
 });
 formatter.match({
@@ -179,28 +179,28 @@ formatter.match({
   "location": "StepDefinitions.eu_seleciono_o_arquivo_de_massa(String)"
 });
 formatter.result({
-  "duration": 161200,
+  "duration": 132500,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.eu_insiro_as_informacoes_cenario()"
 });
 formatter.result({
-  "duration": 1825473100,
+  "duration": 938120900,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.o_sistema_valida_as_informacoes()"
 });
 formatter.result({
-  "duration": 32100,
+  "duration": 27100,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.me_direciona_para_home_com_o_usuario_ja_logado()"
 });
 formatter.result({
-  "duration": 29100,
+  "duration": 23100,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -392,41 +392,43 @@ formatter.match({
   "location": "StepDefinitions.eu_clico_no_icone_da_imagem_do_usuario_que_ja_esta_com_o_meu_login_informado()"
 });
 formatter.result({
-  "duration": 2979301000,
+  "duration": 1624105400,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.o_sistema_apresenta_uma_lista_accordin_com_tres_opcoes_minha_conta_minhas_ordens_e_sair()"
 });
 formatter.result({
-  "duration": 34900,
+  "duration": 35900,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.eu_clico_na_opcao_minha_conta()"
 });
 formatter.result({
-  "duration": 18316900300,
-  "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d85.0.4183.121)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027NP51706604\u0027, ip: \u0027192.168.13.102\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_261\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\P51706~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52526}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 1f1028d58720c708adf3b53995560720\n*** Element info: {Using\u003dxpath, value\u003d(//label[@class\u003d\u0027option roboto-medium ng-scope\u0027])[2]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)\r\n\tat org.openqa.selenium.By$ByXPath.findElements(By.java:348)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)\r\n\tat page_object.AlterarEnderecoEntregaPage.selecionarItemMenu(AlterarEnderecoEntregaPage.java:47)\r\n\tat steps.StepDefinitions.eu_clico_na_opcao_minha_conta(StepDefinitions.java:187)\r\n\tat ✽.Then eu clico na opcao minha conta(features/AlterarEnderecoEntrega.feature:22)\r\n",
-  "status": "failed"
+  "duration": 161138700,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.o_sistema_me_direciona_para_experiencia_minha_conta_onde_posso_alterar_Detalhes_da_conta_Detalhes_de_envio_método_de_pagamento_preferido_Notifique_me_sobre_promoções_ou_ainda_deletar_a_minha_conta()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 58600,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.eu_clico_em_editar_detalhes_da_conta()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1097897200,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.o_sistema_habilita_os_campos_relacionados_a_detalhes_de_conexao_senha_detalhes_pessoais_e_endereco_para_que_eu_possa_alterar()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 81700,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -438,31 +440,36 @@ formatter.match({
   "location": "StepDefinitions.eu_seleciono_o_arquivo_de_massa(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 68400,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.eu_insiro_as_informacoes_ENDERECO()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1043631100,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.clico_no_botao_Salve()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 71244100,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.o_sistema_valida_as_informacoes()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 31700,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.efetua_a_alteracao()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 17200,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -474,6 +481,7 @@ formatter.match({
   "location": "StepDefinitions.apresenta_a_mensagem(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 58300,
+  "status": "passed"
 });
 });
