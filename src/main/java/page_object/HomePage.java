@@ -39,7 +39,7 @@ public class HomePage extends AcessarNavegadores {
         senha.sendKeys((CharSequence) hash_map.get("senha"));
 
         WebElement check = wait.until(ExpectedConditions.visibilityOfElementLocated(lembrarCheckBox));
-//        check.click();
+//        check.click()
 
         WebElement botao = wait.until(ExpectedConditions.visibilityOfElementLocated(logarBtn));
         botao.click();
