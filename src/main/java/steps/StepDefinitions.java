@@ -1,10 +1,13 @@
 package steps;
 
 import acessar_navegadores.AcessarNavegadores;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+//import cucumber.api.java.en.Given;
+//import cucumber.api.java.en.Then;
+//import cucumber.api.java.en.When;
 import element_locators.ElementLocators;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import page_object.*;
 
 public class StepDefinitions {
@@ -41,9 +44,10 @@ public class StepDefinitions {
     }
 
     //EfetuarLogin
+
     @Given("^que eu tenha acessado o site advantageonlineshopping atraves da \"([^\"]*)\"$")
-    public void que_eu_tenha_acessado_o_site_advantageonlineshopping_atraves_da_url(String url) throws Throwable {
-        AcessarNavegadores.abrirChrome(url);
+        public void que_eu_tenha_acessado_o_site_advantageonlineshopping_atraves_da_url(String url) throws Throwable {
+            AcessarNavegadores.abrirChrome(url);
     }
 
     @When("^eu clico no ícone da imagem do usuario$")

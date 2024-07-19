@@ -17,7 +17,7 @@ public class EfetuarPagamentoPage extends AcessarNavegadores {
 
     public static void acessarCarrinho(By menuCarImg, By aguardeGenerico3) {
 
-        WebDriverWait wait = new WebDriverWait(driver, 31);
+        WebDriverWait wait = new WebDriverWait(driver, 33);
 
 //        WebElement menuUsuario = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']")));
         WebElement aguarde = wait.until(ExpectedConditions.visibilityOfElementLocated(aguardeGenerico3));
