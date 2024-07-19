@@ -1,3 +1,9 @@
-C:\Users\p51706604\IdeaProjects\shopping-online\src\main\java\element_locators\ElementLocators.java
-C:\Users\p51706604\IdeaProjects\shopping-online\src\main\java\acessar_navegadores\AcessarNavegadores.java
-C:\Users\p51706604\IdeaProjects\shopping-online\src\main\java\page_object\HomePage.java
+C:\dev\Projetos\shopping_online\src\main\java\acessar_navegadores\AcessarNavegadores.java
+C:\dev\Projetos\shopping_online\src\main\java\page_utils\ObterDadosCSV.java
+C:\dev\Projetos\shopping_online\src\main\java\steps\StepDefinitions.java
+C:\dev\Projetos\shopping_online\src\main\java\page_object\AdicionarProdutoCarrinhoPage.java
+C:\dev\Projetos\shopping_online\src\main\java\page_object\CadastrarUsuarioPage.java
+C:\dev\Projetos\shopping_online\src\main\java\page_object\EfetuarPagamentoPage.java
+C:\dev\Projetos\shopping_online\src\main\java\element_locators\ElementLocators.java
+C:\dev\Projetos\shopping_online\src\main\java\page_object\HomePage.java
+C:\dev\Projetos\shopping_online\src\main\java\page_object\AlterarEnderecoEntregaPage.java

@@ -1,3 +1,9 @@
+steps\StepDefinitions.class
 acessar_navegadores\AcessarNavegadores.class
+page_utils\ObterDadosCSV.class
+page_object\AdicionarProdutoCarrinhoPage.class
+page_object\AlterarEnderecoEntregaPage.class
+page_object\CadastrarUsuarioPage.class
+page_object\EfetuarPagamentoPage.class
 element_locators\ElementLocators.class
 page_object\HomePage.class
